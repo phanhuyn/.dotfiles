@@ -13,14 +13,17 @@ export ML_LOG_SERVER=10.65.192.51
 export MERLION_MONITOR=10.65.16.18
 export LOG_SERVER=10.65.192.51
 export HADOOPNODE=10.65.184.70
-alias runDockerBuild="docker run -it -v $GOPATH/src:/go/src --entrypoint /bin/bash harbor.shopeemobile.com/shopee/build-env:latest"
-alias hstart="/usr/local/Cellar/hadoop/2.8.1/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.8.1/sbin/start-yarn.sh"
-alias hstop="/usr/local/Cellar/hadoop/2.8.1/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.8.1/sbin/stop-dfs.sh"
 alias dog="pygmentize -g"
 alias yarnjs="/usr/local/Cellar/yarn/1.3.2/bin/yarn"
 alias ls="ls -lh"
 alias protoc3.2="protoc-3.2.0-osx-x86_64"
 alias timestamp='date +"%s"'
+alias rm='echo use rmtrash instead!'
+
+# Machine specific
+alias runDockerBuild="docker run -it -v $GOPATH/src:/go/src --entrypoint /bin/bash harbor.shopeemobile.com/shopee/build-env:latest"
+alias hstart="/usr/local/Cellar/hadoop/2.8.1/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.8.1/sbin/start-yarn.sh"
+alias hstop="/usr/local/Cellar/hadoop/2.8.1/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.8.1/sbin/stop-dfs.sh"
 goto(){
 	echo "Where to go? Options are:"
 	echo "-------      HADOOP      -------"
