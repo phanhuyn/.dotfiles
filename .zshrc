@@ -1,18 +1,3 @@
-export PATH=~/develop/gohome/bin:$PATH
-export GOPATH="/Users/nguyenph/develop/gohome"
-export GOBIN="/Users/nguyenph/develop/gohome/bin"
-export GOEXE="/Users/nguyenph/develop/gohome/bin"
-export HADOOP98=10.65.184.82
-export HADOOP99=10.65.184.83
-export RECOMMEND=10.10.48.161
-export SEARCH_TEST=203.117.178.76 #10.65.136.76
-export INDEXER_LIVE=10.10.48.210
-export SEARCH_SERVER_LIVE=10.10.48.149
-export GDS_LIVE=10.10.48.148
-export ML_LOG_SERVER=10.65.192.51
-export MERLION_MONITOR=10.65.16.18
-export LOG_SERVER=10.65.192.51
-export HADOOPNODE=10.65.184.70
 alias dog="pygmentize -g"
 alias yarnjs="/usr/local/Cellar/yarn/1.3.2/bin/yarn"
 alias ls="ls -lh"
@@ -20,40 +5,22 @@ alias protoc3.2="protoc-3.2.0-osx-x86_64"
 alias timestamp='date +"%s"'
 alias rm='echo use rmtrash instead!'
 
-# Machine specific
-alias runDockerBuild="docker run -it -v $GOPATH/src:/go/src --entrypoint /bin/bash harbor.shopeemobile.com/shopee/build-env:latest"
-alias hstart="/usr/local/Cellar/hadoop/2.8.1/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.8.1/sbin/start-yarn.sh"
-alias hstop="/usr/local/Cellar/hadoop/2.8.1/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.8.1/sbin/stop-dfs.sh"
-goto(){
-	echo "Where to go? Options are:"
-	echo "-------      HADOOP      -------"
-	echo "1  | Hadoop98"
-	echo "2  | Hadoop99"
-	echo "3  | Hadoop70"
-	echo "-------      SEARCH      -------"
-	echo "4  | Search (Test)"
-	echo "-------  RECOMMENDATION  -------"
-	echo "5  | Merlion Monitor"
-	echo "-------       LOG       --------"
-	echo "6  | Log server"
-	read location
-	case ${location} in
-	 "1") ssh ld-nguyenph@$HADOOP98
-	;;
-	 "4") ssh ld-nguyenph@$SEARCH_TEST
-	;;
-	 "2") ssh ld-nguyenph@$HADOOP99
-	;;
-	 "5") ssh ld-nguyenph@$MERLION_MONITOR
-	;;
-	 "6") ssh ld-nguyenph@$LOG_SERVER
-	;;
-	 "3") ssh ld-nguyenph@$HADOOPNODE
-	;;
-	esac
+# Open visual studio code by `code`
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+# get timestamp func
+gettimestamp() {
+	echo 'Executing $(date -j -f "%Y%m%d %H%M%S" <your-input> "+%s")'
+	echo 'Enter date time (yyyymmdd hhmmss) - local system timezone'
+	read input
+	date -j -f "%Y%m%d %H%M%S" "$input" "+%s"
 }
 
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+source /Users/nguyenph/develop/gohome/src/git.garena.com/nguyenph/playground/scriptatsee.sh
+
+# Append time to terminal prompts
+export PROMPT_COMMAND="echo -n \[\$(date +%H:%M:%S)\]\ "
+export PS1="\t [\u@\h \W]\\$ \[$(tput sgr0)\]"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
