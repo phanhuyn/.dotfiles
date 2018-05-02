@@ -16,23 +16,20 @@ gettimestamp() {
 	date -j -f "%Y%m%d %H%M%S" "$input" "+%s"
 }
 
-source /Users/nguyenph/develop/gohome/src/git.garena.com/nguyenph/playground/scriptatsee.sh
-
-# Append time to terminal prompts
-export PROMPT_COMMAND="echo -n \[\$(date +%H:%M:%S)\]\ "
-export PS1="\t [\u@\h \W]\\$ \[$(tput sgr0)\]"
+# source /Users/nguyenph/develop/gohome/src/git.garena.com/nguyenph/playground/scriptatsee.sh
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/nguyenph/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="mh"
+ZSH_THEME=pygmalion
+plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -74,7 +71,7 @@ ZSH_THEME="mh"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -119,5 +116,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-. ~/z.sh
