@@ -1,3 +1,5 @@
+#################################################################################################
+# ALIAS
 alias dog="pygmentize -g"
 alias yarnjs="/usr/local/Cellar/yarn/1.3.2/bin/yarn"
 alias ls="ls -lh"
@@ -5,7 +7,6 @@ alias protoc3.2="protoc-3.2.0-osx-x86_64"
 alias timestamp='date +"%s"'
 alias rm='echo use rmtrash instead!'
 
-# Open visual studio code by `code`
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 # get timestamp func
@@ -21,22 +22,68 @@ gettimestamp() {
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+##################################################################################################
+# OH-MY-ZSH
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME=pygmalion
-plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
+# THEME
+ZSH_THEME=powerlevel9k/powerlevel9k
 
-# Set list of themes to load
-# Setting this variable when ZSH_THEME=random
-# cause zsh load theme from this variable instead of
-# looking in ~/.oh-my-zsh/themes/
-# An empty array have no effect
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# PLUGINS
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(
+git 
+zsh-syntax-highlighting
+zsh-autosuggestions
+)
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ 
+source $ZSH/oh-my-zsh.sh
+
+# z
+if command -v brew >/dev/null 2>&1; then
+	# Load rupa's z if installed
+	[ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
+fi
+
+# zsh-autosuggestions color
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
+
+##################################################################################################
+# powerlevel9k
+
+# spacing
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+# right/left status bar
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
+
+# color
+POWERLEVEL9K_TIME_BACKGROUND='white'
+POWERLEVEL9K_TIME_FOREGROUND='black'
+
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='088'
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='230'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='088'
+POWERLEVEL9K_DIR_HOME_FOREGROUND='230'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='088'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='230'
+
+POWERLEVEL9K_VCS_CLEAN_FOREGROUND='blue'
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='black'
+POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='yellow'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='black'
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='red'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
+
+# truncate the dir
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_STRATEGY="Default"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -71,22 +118,11 @@ plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-HIST_STAMPS="mm/dd/yyyy"
+# HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  zsh-autosuggestions
-  z
-)
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
