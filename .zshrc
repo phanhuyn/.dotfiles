@@ -40,6 +40,7 @@ plugins=(
 git 
 zsh-syntax-highlighting
 zsh-autosuggestions
+zsh-syntax-highlighting-filetypes
 )
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
  
@@ -155,3 +156,6 @@ POWERLEVEL9K_SHORTEN_STRATEGY="Default"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export CLICOLOR=1;
+export LSCOLORS=exfxcxdxbxegedabagacad;
