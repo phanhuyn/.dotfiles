@@ -564,6 +564,8 @@
 	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>524288</integer>
+	<key>LeftTabBarWidth</key>
+	<real>50</real>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSNavLastRootDirectory</key>
@@ -608,13 +610,13 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>825 196 606 469 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>182 457 928 401 0 0 1440 877 </string>
+	<string>182 464 928 394 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 293 592 584 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 48 1440 829 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>176 127 650 502 0 0 1440 877 </string>
+	<string>176 87 700 527 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -802,14 +804,12 @@
 			<true/>
 			<key>Background Color</key>
 			<dict>
-				<key>Alpha Component</key>
-				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.119964599609375</real>
+				<real>0.21176470588235294</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.095527368075178296</real>
+				<real>0.16862745098039217</real>
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
@@ -902,16 +902,14 @@
 			<false/>
 			<key>Foreground Color</key>
 			<dict>
-				<key>Alpha Component</key>
-				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.69451904296875</real>
+				<real>0.58823529411764708</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.68826204430508009</real>
+				<real>0.58039215686274515</real>
 				<key>Red Component</key>
-				<real>0.63507755566388369</real>
+				<real>0.51372549019607838</real>
 			</dict>
 			<key>Guid</key>
 			<string>9D90A2A7-6680-4529-AC67-CB717116C57F</string>
@@ -2068,7 +2066,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-05-16T15:11:25Z</date>
+	<date>2018-06-01T15:26:21Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
