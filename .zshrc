@@ -6,6 +6,7 @@ alias ls="ls -lh"
 alias protoc3.2="protoc-3.2.0-osx-x86_64"
 alias timestamp='date +"%s"'
 alias rm='echo use rmtrash instead!'
+alias vim='/usr/local/bin/vim'
 
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
