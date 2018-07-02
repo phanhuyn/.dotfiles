@@ -6,7 +6,7 @@ alias ls="ls -lh"
 alias protoc3.2="protoc-3.2.0-osx-x86_64"
 alias timestamp='date +"%s"'
 alias rm='echo use rmtrash instead!'
-alias vim='/usr/local/bin/vim'
+alias vim='nvim'
 
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
@@ -24,7 +24,13 @@ gettimestamp() {
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # export color
-export TERM="xterm-256color"
+# export TERM="xterm-256color"
+
+##################################################################################################
+# GO
+export GOPATH=~/go
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 ##################################################################################################
 # OH-MY-ZSH
