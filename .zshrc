@@ -1,3 +1,5 @@
+export TERM="xterm-256color"
+
 #################################################################################################
 # ALIAS
 alias dog="pygmentize -g"
@@ -6,7 +8,7 @@ alias ls="ls -lh"
 alias protoc3.2="protoc-3.2.0-osx-x86_64"
 alias timestamp='date +"%s"'
 alias rm='echo use rmtrash instead!'
-alias vim='nvim'
+# alias vim='nvim'
 
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
@@ -28,8 +30,8 @@ gettimestamp() {
 
 ##################################################################################################
 # GO
-export GOPATH=~/go
-export GOROOT=/usr/local/go
+export GOPATH=~/develop/gohome
+# export GOROOT=/usr/local/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 ##################################################################################################
