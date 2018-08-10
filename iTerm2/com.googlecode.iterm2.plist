@@ -606,7 +606,7 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>-1137 297 445 77 -1920 -30 1920 1057 </string>
+	<string>-1137 163 445 77 -1920 -30 1920 1057 </string>
 	<key>NSWindow Frame ProfilesPanel</key>
 	<string>-1575 594 735 382 -1920 -30 1920 1057 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -614,13 +614,13 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>-1591 53 606 469 -1920 -30 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>-1108 449 796 473 -1920 -30 1920 1057 </string>
+	<string>-1107 599 928 394 -1920 -30 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>-1920 -30 1920 1057 -1920 -30 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>-784 101 715 527 -1920 -30 1920 1057 </string>
+	<string>0 0 1680 1027 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>-1652 54 715 527 -1920 -30 1920 1057 </string>
+	<string>-1652 90 715 477 -1920 -30 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -859,14 +859,16 @@
 			<string></string>
 			<key>Cursor Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.58823529411764708</real>
+				<real>0.059863256290555</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.58039215686274515</real>
+				<real>0.87092623369034072</real>
 				<key>Red Component</key>
-				<real>0.51372549019607838</real>
+				<real>0.87298583984375</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -1235,7 +1237,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>MesloLGMForPowerline-Regular 14</string>
+			<string>MesloLGMForPowerline-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1264,13 +1266,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.20395449409261346</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.34594575443254882</real>
 				<key>Red Component</key>
-				<real>0.70172119140625</real>
+				<real>0.887481689453125</real>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -2072,11 +2074,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-07-10T02:36:57Z</date>
+	<date>2018-08-07T09:37:25Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.11520683092948722</real>
 	<key>TabStyle</key>
