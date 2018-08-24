@@ -15,12 +15,16 @@ code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 # get timestamp func
 gettimestamp() {
 	echo 'Executing $(date -j -f "%Y%m%d %H%M%S" <your-input> "+%s")'
-	echo 'Enter date time (yyyymmdd hhmmss) - local system timezone'
-	read input
-	date -j -f "%Y%m%d %H%M%S" "$input" "+%s"
+	if [ "$#" -ne 2 ]; then 
+		echo 'Enter date time (yyyymmdd hhmmss) - local system timezone'
+		read input
+		date -j -f "%Y%m%d %H%M%S" "$input" "+%s"
+	else
+		date -j -f "%Y%m%d %H%M%S" "$1 $2" "+%s"	
+	fi
 }
 
-# source /Users/nguyenph/develop/gohome/src/git.garena.com/nguyenph/playground/scriptatsee.sh
+source /Users/nguyenph/develop/gohome/src/git.garena.com/nguyenph/playground/scriptatsea.sh
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -32,6 +36,7 @@ gettimestamp() {
 # GO
 export GOPATH=~/develop/gohome
 # export GOROOT=/usr/local/go
+unset GOROOT
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 ##################################################################################################
