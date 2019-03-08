@@ -1,14 +1,14 @@
+# For MacOS iterm2
 export TERM="xterm-256color"
 
-#################################################################################################
+#########################################################################################
 # ALIAS
-alias dog="pygmentize -g"
-alias yarnjs="/usr/local/Cellar/yarn/1.3.2/bin/yarn"
-alias ls="ls -lh"
+#########################################################################################
+# assuming `zsh`, `nvim`, `rmtrash` & `vscode` are installed
 alias protoc3.2="protoc-3.2.0-osx-x86_64"
 alias timestamp='date +"%s"'
 alias rm='echo use rmtrash instead!'
-# alias vim='nvim'
+alias vim='nvim'
 
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
@@ -26,21 +26,16 @@ gettimestamp() {
 
 source /Users/nguyenph/develop/gohome/src/git.garena.com/nguyenph/playground/scriptatsea.sh
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# export color
-# export TERM="xterm-256color"
-
-##################################################################################################
+#########################################################################################
 # GO
+#########################################################################################
 export GOPATH=~/develop/gohome
-# export GOROOT=/usr/local/go
 unset GOROOT
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
-##################################################################################################
+#########################################################################################
 # OH-MY-ZSH
+#########################################################################################
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
@@ -69,8 +64,9 @@ fi
 # zsh-autosuggestions color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 
-##################################################################################################
+#########################################################################################
 # powerlevel9k
+#########################################################################################
 
 # spacing
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
