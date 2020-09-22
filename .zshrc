@@ -1,14 +1,14 @@
-# For MacOS iterm2
 export TERM="xterm-256color"
 
-#########################################################################################
+#################################################################################################
 # ALIAS
-#########################################################################################
-# assuming `zsh`, `nvim`, `rmtrash` & `vscode` are installed
+alias dog="pygmentize -g"
+alias yarnjs="/usr/local/Cellar/yarn/1.3.2/bin/yarn"
+alias ls="ls -lh"
 alias protoc3.2="protoc-3.2.0-osx-x86_64"
 alias timestamp='date +"%s"'
-alias rm='echo use rmtrash instead!'
-alias vim='nvim'
+#alias rm='echo use rmtrash instead!'
+# alias vim='nvim'
 
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
@@ -19,38 +19,55 @@ gettimestamp() {
 		echo 'Enter date time (yyyymmdd hhmmss) - local system timezone'
 		read input
 		date -j -f "%Y%m%d %H%M%S" "$input" "+%s"
+		date -j -f "%Y%m%d %H%M%S" "$input" "+%s" | pbcopy
+		echo "(timestamp copied to clipboard)"
 	else
-		date -j -f "%Y%m%d %H%M%S" "$1 $2" "+%s"	
+		date -j -f "%Y%m%d %H%M%S" "$1 $2" "+%s" 
+		date -j -f "%Y%m%d %H%M%S" "$1 $2" "+%s" | pbcopy	
+		echo "(timestamp copied to clipboard)"
 	fi
 }
 
 source /Users/nguyenph/develop/gohome/src/git.garena.com/nguyenph/playground/scriptatsea.sh
 
-#########################################################################################
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# export color
+# export TERM="xterm-256color"
+
+##################################################################################################
 # GO
-#########################################################################################
 export GOPATH=~/develop/gohome
+# export GOROOT=/usr/local/go
 unset GOROOT
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
-#########################################################################################
+##################################################################################################
 # OH-MY-ZSH
-#########################################################################################
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 
 # THEME
+#ZSH_THEME=robbyrussell
+# Seems like this doesn't work with Mac Mojave
 ZSH_THEME=powerlevel9k/powerlevel9k
+
 
 # PLUGINS
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
-git 
+#git 
+gitfast
 zsh-syntax-highlighting
 zsh-autosuggestions
 zsh-syntax-highlighting-filetypes
+#docker
+docker docker-compose
+kubectl
 )
+
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
  
 source $ZSH/oh-my-zsh.sh
@@ -64,17 +81,18 @@ fi
 # zsh-autosuggestions color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
 
-#########################################################################################
+##################################################################################################
 # powerlevel9k
-#########################################################################################
 
 # spacing
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
 # right/left status bar
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs time)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs time)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator time)
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
 
 # color
 POWERLEVEL9K_TIME_BACKGROUND='248'
@@ -127,7 +145,7 @@ POWERLEVEL9K_SHORTEN_STRATEGY="Default"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -167,5 +185,16 @@ POWERLEVEL9K_SHORTEN_STRATEGY="Default"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export CLICOLOR=1;
-export LSCOLORS=exfxcxdxbxegedabagacad;
+#export CLICOLOR=1;
+#export LSCOLORS=exfxcxdxbxegedabagacad;
+__git_files () { 
+    _wanted files expl 'local files' _files  }
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/nguyenph/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/nguyenph/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/nguyenph/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/nguyenph/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Created by `userpath` on 2020-02-12 02:37:26
+export PATH="$PATH:/Users/nguyenph/.local/bin"
