@@ -2,15 +2,16 @@ export TERM="xterm-256color"
 
 #################################################################################################
 # ALIAS
-alias dog="pygmentize -g"
-alias yarnjs="/usr/local/Cellar/yarn/1.3.2/bin/yarn"
 alias ls="ls -lh"
-alias protoc3.2="protoc-3.2.0-osx-x86_64"
 alias timestamp='date +"%s"'
-#alias rm='echo use rmtrash instead!'
+alias rm='echo use rmtrash instead!'
 # alias vim='nvim'
 
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+alias codef='code "$(fzf)"'
+alias nvimf='nvim "$(fzf)"'
+alias vimf='vim "$(fzf)"'
 
 # get timestamp func
 gettimestamp() {
@@ -198,3 +199,5 @@ if [ -f '/Users/nguyenph/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then 
 
 # Created by `userpath` on 2020-02-12 02:37:26
 export PATH="$PATH:/Users/nguyenph/.local/bin"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
