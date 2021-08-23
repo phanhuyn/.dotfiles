@@ -1,5 +1,7 @@
 # default font size
 font:
+  normal:
+    family: Source Code Pro for Powerline
   size: 16.0
 
 key_bindings:
