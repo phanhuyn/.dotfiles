@@ -1,0 +1,8 @@
+# default font size
+font:
+  size: 16.0
+
+key_bindings:
+  # move left and right of word
+  - { key: Right, mods: Alt, chars: "\x1BF" }
+  - { key: Left,  mods: Alt, chars: "\x1BB" }
