@@ -8,3 +8,9 @@ key_bindings:
   # move left and right of word
   - { key: Right, mods: Alt, chars: "\x1BF" }
   - { key: Left,  mods: Alt, chars: "\x1BB" }
+
+window:
+ padding:
+  x: 5
+  y: 2
+

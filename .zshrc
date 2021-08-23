@@ -29,7 +29,8 @@ gettimestamp() {
 	fi
 }
 
-source /Users/nguyenph/develop/gohome/src/git.garena.com/nguyenph/playground/scriptatsea.sh
+
+source /Users/nguyenph/dev/go/src/git.garena.com/nguyenph/playground/scriptatsea.sh
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -39,9 +40,7 @@ source /Users/nguyenph/develop/gohome/src/git.garena.com/nguyenph/playground/scr
 
 ##################################################################################################
 # GO
-export GOPATH=~/develop/gohome
-# export GOROOT=/usr/local/go
-unset GOROOT
+export GOPATH=~/dev/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 ##################################################################################################
@@ -52,7 +51,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highligh
 
 # THEME
 #ZSH_THEME=robbyrussell
-# Seems like this doesn't work with Mac Mojave
 ZSH_THEME=powerlevel9k/powerlevel9k
 
 
@@ -63,21 +61,15 @@ plugins=(
 gitfast
 zsh-syntax-highlighting
 zsh-autosuggestions
-zsh-syntax-highlighting-filetypes
+#zsh-syntax-highlighting-filetypes
 #docker
-docker docker-compose
-kubectl
+#docker docker-compose
+#kubectl
+#history-sync
 )
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
- 
 source $ZSH/oh-my-zsh.sh
-
-# z
-if command -v brew >/dev/null 2>&1; then
-	# Load rupa's z if installed
-	[ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
-fi
 
 # zsh-autosuggestions color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
@@ -188,16 +180,14 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 #export CLICOLOR=1;
 #export LSCOLORS=exfxcxdxbxegedabagacad;
-__git_files () { 
-    _wanted files expl 'local files' _files  }
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/nguyenph/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/nguyenph/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/nguyenph/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/nguyenph/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Created by `userpath` on 2020-02-12 02:37:26
-export PATH="$PATH:/Users/nguyenph/.local/bin"
+###################################################################
+# fzf
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Start direcory
+export START="/Users/nguyenph/dev/go/src/git.garena.com/shopee"
+if [[ $PWD == $HOME ]]; then
+    cd $START
+fi
