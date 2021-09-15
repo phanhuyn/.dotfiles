@@ -1,11 +1,14 @@
 export TERM="xterm-256color"
 
+# show dotfiles in autocomplete
+setopt globdots
+
 #################################################################################################
 # ALIAS
 alias ls="ls -lh"
 alias timestamp='date +"%s"'
 alias rm='echo use rmtrash instead!'
-# alias vim='nvim'
+alias vim='nvim'
 
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
@@ -57,7 +60,7 @@ ZSH_THEME=powerlevel9k/powerlevel9k
 # PLUGINS
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
-#git 
+git 
 gitfast
 zsh-syntax-highlighting
 zsh-autosuggestions
@@ -185,9 +188,3 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # fzf
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Start direcory
-export START="/Users/nguyenph/dev/go/src/git.garena.com/shopee"
-if [[ $PWD == $HOME ]]; then
-    cd $START
-fi
