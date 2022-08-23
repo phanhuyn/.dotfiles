@@ -8,7 +8,7 @@ setopt globdots
 alias ls="ls -lh"
 alias timestamp='date +"%s"'
 alias rm='echo use rmtrash instead!'
-alias vim='nvim'
+#alias vim='nvim'
 
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
@@ -33,7 +33,7 @@ gettimestamp() {
 }
 
 
-source /Users/nguyenph/dev/go/src/git.garena.com/nguyenph/playground/scriptatsea.sh
+#source /Users/nguyenph/dev/go/src/git.garena.com/nguyenph/playground/scriptatsea.sh
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -50,7 +50,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 # OH-MY-ZSH
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
-ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+#ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
 
 # THEME
 #ZSH_THEME=robbyrussell
@@ -71,7 +71,7 @@ zsh-autosuggestions
 #history-sync
 )
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 
 # zsh-autosuggestions color
