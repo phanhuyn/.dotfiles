@@ -32,9 +32,6 @@ gettimestamp() {
 	fi
 }
 
-
-#source /Users/nguyenph/dev/go/src/git.garena.com/nguyenph/playground/scriptatsea.sh
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -45,6 +42,7 @@ gettimestamp() {
 # GO
 export GOPATH=~/dev/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+alias runDockerBuild="docker run -it -v $GOPATH:/go --entrypoint /bin/bash golang:1.17"
 
 ##################################################################################################
 # OH-MY-ZSH
