@@ -1,0 +1,9 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+    name = Nguyen Phan Huy
+    email = phanhuy1502@gmail.com
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+[pretty]
+    s = format:%C(yellow)%h%Creset%x09%Cred%<(20)%an%Creset%x09%Cblue%ad%Creset%x09%s
