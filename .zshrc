@@ -72,8 +72,9 @@ zsh-autosuggestions
 #source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 
-# zsh-autosuggestions color
+# zsh-autosuggestions color and shortcut
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
+bindkey '^f' forward-word
 
 ##################################################################################################
 # powerlevel9k
