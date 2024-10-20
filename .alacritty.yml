@@ -2,7 +2,7 @@
 font:
   normal:
     family: Source Code Pro for Powerline
-  size: 16.0
+  size: 20.0
 
 key_bindings:
   # move left and right of word
